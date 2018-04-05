@@ -1,8 +1,3 @@
-/**
- * @author: wanghao52
- * @date: 2018/4/4
- * @desc:
- */
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
