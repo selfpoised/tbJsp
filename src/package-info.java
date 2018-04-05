@@ -10,7 +10,7 @@
  *
  *  jsp本地链接调用：
  *      查看调度服务器列表：
- *      	http://localhost:8080/serverList.jsp
+ *          http://localhost:8080/serverList.jsp
  *
  *      特定任务类型信息：
  *          http://localhost:8080/taskTypeInfo.jsp?baseTaskType=PamirsScheduleTest
