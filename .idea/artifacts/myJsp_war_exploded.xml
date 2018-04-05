@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="myJsp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/myJsp_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="tbJsp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="tbJsp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="spring-2.5.6.SEC02" />
+          <element id="library" level="project" name="commons-beanutils-core-1.7.0" />
+          <element id="library" level="project" name="commons-logging-1.0" />
+          <element id="library" level="project" name="commons-lang-2.4" />
+          <element id="library" level="project" name="ognl-2.6.9" />
+          <element id="library" level="project" name="commons-dbcp-1.2.2" />
+          <element id="library" level="project" name="commons-pool-1.3" />
+          <element id="library" level="project" name="ant-1.6.5" />
+          <element id="library" level="project" name="jmxtools-1.2.1" />
+          <element id="library" level="project" name="commons-collections-2.0" />
+          <element id="library" level="project" name="log4j-1.2.16" />
+          <element id="library" level="project" name="mysql-connector-java-5.0.5" />
+          <element id="library" level="project" name="unitils-2.3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
