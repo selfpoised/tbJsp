@@ -11,6 +11,9 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
   </component>
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
@@ -46,5 +49,6 @@
     <orderEntry type="library" name="log4j-1.2.16" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.0.5" level="project" />
     <orderEntry type="library" name="unitils-2.3" level="project" />
+    <orderEntry type="library" name="4" level="project" />
   </component>
 </module>
