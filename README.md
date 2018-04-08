@@ -25,9 +25,11 @@ tbschedule jsp starter
 
 ## 在一个JVM里面可能存在多个处理相同任务类型的Manager，也可能存在处理不同任务类型的Manager
  doc文件夹下：数据边界.png
- 
+ ![data boundary](doc/数据边界.png "1")
 ## 对某一特定任务类型(taskType + ownsign)，是如何在多个调度服务器(任务类型相同)间分配任务
 doc文件夹下：重分配任务.jpg
+ ![resign queue](doc/重分配任务.jpg "2")
+ 
 1) 核心类及其功能
 
 		调度服务器：TBScheduleManager
