@@ -54,6 +54,23 @@ doc文件夹下：重分配任务.jpg
 4) 任务队列是如何分配给调度服务器的？
 
 		类似取模的方式，队列平均分配给不同调度服务器
+
+5) 上述分配完成后，PAMIRS_SCHEDULE_QUEUE
+
+		CUR_SERVER	REQ_SERVER
+		me			other
+		me			null
+		me 			null
+		other 		null
+		...			...
+		...			...
+		
+		分配完毕后，并不代表调度服务就能得到实际队列，还要原来的队列拥有者自行释放给请求者。这些检测，是在心跳周期内完成的
+		比如，第一行的me将会在下一个心跳时把队列让渡给other。
+		
+		每个队列只释放自己拥有，且被别人申请的队列。因此完全的队列重分配不能一蹴而就。
+		
+		releaseDealQueue
         
 ## 为何在pamirs_schedule_queue必须对相应tasktype加入对应的base数量队列
 为何必须有"Base" ownsign，在pamirs_schedule_queue中有了"Base" ownsign的队列定义后。用户使用其它的
