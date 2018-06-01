@@ -174,3 +174,24 @@ jsp management console:
 	http://localhost:8080/createTaskType.jsp?action=clearTaskType&taskType=tasktype1
 	http://localhost:8080/createTaskType.jsp?action=deleteTaskType&taskType=tasktype1
 ```
+
+## 初始化pamirs_schedule_queue
+```
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (1,'PamirsScheduleTest', '0','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (2,'PamirsScheduleTest', '1','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (3,'PamirsScheduleTest', '2','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (4,'PamirsScheduleTest', '3','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (5,'PamirsScheduleTest', '4','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (6,'PamirsScheduleTest', '5','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (7,'PamirsScheduleTest', '6','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (8,'PamirsScheduleTest', '7','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (9,'PamirsScheduleTest', '8','BASE',now(),now());
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (10,'PamirsScheduleTest', '9','BASE',now(),now());
+
+实际上也可以不一定写base
+insert into PAMIRS_SCHEDULE_QUEUE (ID, TASK_TYPE, QUEUE_ID, OWN_SIGN, GMT_CREATE, GMT_MODIFIED)values (1,'PamirsScheduleTest', '11','ABC',now(),now());
+或者干脆所以11个队列OWN_SIGN都配'ABC'也可以
+这样实际的任务队列会配置11个，但是并不规范，所以不建议这么玩
+
+详见ScheduleConfigCenterClientInner.loadAllQueue，没有限制OWN_SIGN必须为'BASE'
+```
